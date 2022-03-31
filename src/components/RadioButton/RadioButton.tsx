@@ -30,7 +30,8 @@ const RadioButton: React.FC<RadioButtonProps> = ({
     (index: number, id: string): boolean => {
       const keyCount = Object.keys(menuState).length;
       const updatedId = updatedMenuState;
-      const specificRule = apiResponse.rules[updatedId ? updatedId : menuState[keyCount >= 2 ? 1 : index - 1]] ?? apiResponse.rules[updatedId ? updatedId : menuState[index - 1]];
+      const specificRule = apiResponse.rules[updatedId ? updatedId : menuState[keyCount >= 2 ? 1 : index - 1]] 
+        ?? apiResponse.rules[updatedId ? updatedId : menuState[index - 1]];
    
       if (index === 0) return false;
       
